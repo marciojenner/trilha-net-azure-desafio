@@ -1,7 +1,37 @@
+using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace TrilhaNetAzureDesafio.Models
 {
     public class Funcionario
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+
+        [Required]
+        [StringLength(100)]
+        public string Nome { get; set; }
+
+        [StringLength(200)]
+        public string Endereco { get; set; }
+
+        [StringLength(20)]
+        public string Ramal { get; set; }
+
+        [EmailAddress]
+        public string EmailProfissional { get; set; }
+
+        [StringLength(100)]
+        public string Departamento { get; set; }
+
+        [Required]
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal Salario { get; set; }
+
+        public DateTimeOffset? DataAdmissao { get; set; }
+
         public Funcionario() { }
 
         public Funcionario(int id, string nome, string endereco, string ramal, string emailProfissional, string departamento, decimal salario, DateTime dataAdmissao)
@@ -15,14 +45,5 @@ namespace TrilhaNetAzureDesafio.Models
             Salario = salario;
             DataAdmissao = dataAdmissao;
         }
-
-        public int Id { get; set; }
-        public string Nome { get; set; }
-        public string Endereco { get; set; }
-        public string Ramal { get; set; }
-        public string EmailProfissional { get; set; }
-        public string Departamento { get; set; }
-        public decimal Salario { get; set; }
-        public DateTimeOffset? DataAdmissao { get; set; }
     }
 }

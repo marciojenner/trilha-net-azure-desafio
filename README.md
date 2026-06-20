@@ -1,6 +1,8 @@
 # DIO - Trilha .NET - Nuvem com Microsoft Azure
 www.dio.me
 
+[Rodando no Azure:](https://desafiovideodio-akaubch5c7d7bke0.westus3-01.azurewebsites.net/swagger/index.html)
+
 ## Desafio de projeto
 Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de Nuvem com Microsoft Azure, da trilha .NET da DIO.
 
